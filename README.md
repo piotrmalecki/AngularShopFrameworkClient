@@ -1,0 +1,2 @@
+# AngularShopFrameworkClient
+Angular Client
