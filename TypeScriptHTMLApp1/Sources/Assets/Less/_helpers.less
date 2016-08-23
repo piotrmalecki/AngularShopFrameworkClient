@@ -1,0 +1,102 @@
+/* ============================== */
+/* ========= Directories ======== */
+/* ============================== */
+
+@dir-images: "/Public/Assets/Images";
+@dir-fonts: "/Public/Assets/Fonts";
+
+/* ============================== */
+/* ========== Functions ========= */
+/* ============================== */
+
+.helper-placeholder-color(@color: red){
+
+    ::-webkit-input-placeholder {
+        color: @color;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: @color;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: @color;
+    }
+    :-ms-input-placeholder {
+        color: @color;
+    }
+}
+
+.helper-draw-triangle-base() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    -moz-transform: scale(.9999);
+}
+.helper-draw-triangle(@direction, @size) {
+    .helper-draw-triangle-base(@direction, @size * 2, @size);
+}
+.helper-draw-triangle(@direction, @width, @height) when (@direction = up) {
+    .helper-draw-triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-bottom: @height solid;
+}
+.helper-draw-triangle(@direction, @width, @height) when (@direction = down) {
+    .helper-draw-triangle-base();
+    border-left: (@width / 2) solid transparent;
+    border-right: (@width / 2) solid transparent;
+    border-top: @height solid;
+}
+.helper-draw-triangle(@direction, @width, @height) when (@direction = left) {
+    .helper-draw-triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-right: @height solid;
+}
+.helper-draw-triangle(@direction, @width, @height) when (@direction = right) {
+    .helper-draw-triangle-base();
+    border-top: (@width / 2) solid transparent;
+    border-bottom: (@width / 2) solid transparent;
+    border-left: @height solid;
+}
+
+/* ============================== */
+/* ======= Helpers classes ====== */
+/* ============================== */
+
+.helper-wrapper{
+    width: 100%;
+    float: left;
+}
+.helper-center-block{
+    display: block;
+    margin: 0 auto;
+}
+.helper-clear-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.helper-text-center{
+    .helper-wrapper;
+    text-align: center;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ============================== */
+/* ===== Margins & paddings ===== */
+/* ============================== */
+
+// Reset all
+.no-margin-padding{
+    margin: 0;
+    padding: 0;
+}
+
+.text-right {
+    text-align: right;
+}

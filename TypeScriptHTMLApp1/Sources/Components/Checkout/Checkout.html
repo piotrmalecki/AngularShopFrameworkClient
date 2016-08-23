@@ -1,0 +1,115 @@
+﻿<script src="/Sources/Vendor/Card/card.js"></script>
+<link rel="stylesheet" href="/Public/Assets/Css/card.css">
+
+<div class="col-lg-10" ng-show="viewModel.isSuccessful">
+    <div class="well bs-component">
+        <h2>Checkout Complete</h2>
+        <p>Thanks for your order!</p>
+    </div>
+</div>
+
+<div class="col-lg-10" ng-show="!viewModel.isSuccessful">
+    <div class="well bs-component">
+
+        <h2>Address And Payment</h2>
+        <fieldset>
+            <legend>Shipping Information</legend>
+
+            <form ng-submit="viewModel.submit()">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">First Name</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="First Name" ng-model="viewModel.order.FirstName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Last Name</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Last Name" ng-model="viewModel.order.LastName" required>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Address</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Street Address" ng-model="viewModel.order.Address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">City</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="City" ng-model="viewModel.order.City" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">State</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="State" ng-model="viewModel.order.State" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Zip Code</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Zip Code" ng-model="viewModel.order.PostalCode" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Country</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Country" ng-model="viewModel.order.Country" required>
+                    </div>
+                </div>
+
+                <br>
+
+                <<div class="form-group">
+                    <label class="col-lg-2 control-label">Phone</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Phone Number" ng-model="viewModel.order.Phone" required>
+                        <div class="checkbox">
+                            <label>
+                                Save my Info for next time.
+                            </label>
+                            <input class="form-control" type="checkbox" ng-model="viewModel.order.SaveInfo" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Credit Card</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="text" placeholder="Credit Card Number" ng-model="viewModel.order.CreditCard" required>
+                        <span class="help-block">For security the credit card is not stored in our system.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Expiration Date</label>
+                    <div class="col-lg-10">
+                        <input class="form-control" type="date" placeholder="Expiration Date" ng-model="viewModel.order.Expiration" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Credit Card Type</label>
+                    <div class="col-lg-10">
+                        <select class="form-control" id="select" ng-model="viewModel.selected">
+                            <option>Amex</option>
+                            <option>Visa</option>
+                            <option>Mastercard</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-8">
+                        <button type="submit" class="btn btn-primary">Submit Order &raquo;</button>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</div>

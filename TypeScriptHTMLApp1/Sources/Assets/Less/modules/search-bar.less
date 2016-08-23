@@ -1,0 +1,174 @@
+.search-bar {
+    background-color: rgba(52, 54, 121, 0.93);
+    padding: 33px 0;
+    overflow: visible;
+
+    form {
+        text-align: center;
+
+        label {
+            float: left;
+            font-size: 24px;
+            line-height: 2;
+            color: #FFF;
+            .ProximaSemiBold;
+        }
+
+        .input-wrapper {
+            float: left;
+            margin: 0 20px;
+            position: relative;
+
+            .form-control {
+                width: 287px;
+                display: block;
+
+                &.wide {
+                    width: auto;
+                }
+            }
+
+            a.show-more {
+                color: #FFF;
+                display: block;
+                float: left;
+                margin-top: 10px;
+                border-bottom: 1px dashed;
+                font-size: 14px;
+                line-height: 1.3;
+                text-decoration: none;
+
+                i {
+                    font-size: 10px;
+                    margin-left: 5px;
+                    -moz-transition: all .2s ease-in-out;
+                    -o-transition: all .2s ease-in-out;
+                    -webkit-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                }
+
+                &.active {
+                    i {
+                        -moz-transform: rotate(180deg) translateY(-1px);
+                        -ms-transform: rotate(180deg) translateY(-1px);
+                        -o-transform: rotate(180deg) translateY(-1px);
+                        -webkit-transform: rotate(180deg) translateY(-1px);
+                        transform: rotate(180deg) translateY(-1px);
+                    }
+                }
+            }
+        }
+
+        button {
+            line-height: 1.5;
+            vertical-align: top;
+            margin-bottom: 31px;
+
+        }
+        .button-low {
+            line-height: 1.5;
+            vertical-align: top;
+            margin-bottom: 0px;
+           
+        }
+    }
+
+    &.single-line {
+        padding: 16px;
+
+        button, label {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/* RWD */
+@media (max-width: 980px) {
+    .search-bar.single-line {
+        .form-group:first-child {
+            margin-bottom: 20px;
+        }
+    }
+    .search-bar form .input-wrapper .form-cotrol {
+        width: 225px;
+    }
+}
+@media (max-width: 768px) {
+    .search-bar {
+        background: #343679;
+        position: relative;
+        &.pos-bottom {
+            position: relative;
+            top: auto;
+        }
+        form {
+            .form-group {
+                display: inline-block;
+                clear: both;
+                &:last-child {
+                    width: 100%;
+                    margin-bottom: 0;
+                    button {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            button {
+                margin-bottom: 0;
+            }
+        }
+        &.search-bar-panes {
+            position: relative;
+            top: 0;
+            .pane {
+                display: none;
+                opacity: 1;
+                -webkit-transition: none;
+            }
+            &.pane-opened {
+                .pane {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 640px) {
+    .search-bar.single-line {
+        label {
+            width: 100%;
+            display: block;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .input-wrapper {
+            float: none;
+        }
+        .form-group:first-child {
+            text-align: center;
+            label {
+                margin-bottom: 10px;
+            }
+            input {
+                display: inline-block;
+            }
+        }
+    }
+}
+@media (max-width: 420px) {
+    .search-bar {
+        label {
+            width: 100%;
+            text-align: center;
+        }
+        form .input-wrapper {
+            float: none;
+            margin: 0 auto;
+
+            multi-dropdown{
+               display: table;
+            }
+        }
+    }
+}

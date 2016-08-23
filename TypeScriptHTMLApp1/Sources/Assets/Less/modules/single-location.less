@@ -1,0 +1,120 @@
+section#single-location {
+    padding: 50px 0;
+    color: @color-dark;
+    header {
+        h1 {
+            display: block;
+            float: none;
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+    h1 {
+        font-size: 30px;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        .ProximaSemiBold;
+        i {
+            position: absolute;
+            left: -40px;
+            top: 2px;
+        }
+    }
+    h2 {
+        font-size: 14px;
+        .Proxima;
+    }
+    .get-directions {
+        display: inline-block;
+        line-height: 2.4;
+        margin-left: 15px;
+        font-size: 14px;
+    }
+    .description p {
+        font-size: 16px;
+        line-height: 23px;
+        .Proxima;
+
+    }
+    ul.details {
+        .helper-clear-list;
+        li {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 80px;
+            p {
+                line-height: 1.2;
+                margin: 0 0 10px;
+                &.detail-title {
+                    .ProximaSemiBold;
+                }
+                &.detail-description {
+                    .Proxima;
+                }
+            }
+        }
+    }
+    figure {
+        margin-bottom: 40px;
+        img {
+            max-width: 100%;
+        }
+    }
+    dl.facility-features {
+        margin: 0;
+        padding-left: 15px;
+        dt {
+            font-size: 16px;
+            margin-bottom: 15px;
+            
+            margin-left: -15px;
+            // Theme
+            color: #47406b;
+            .ProximaSemiBold;
+        }
+        dd {
+            margin: 0;
+            display: list-item;
+            list-style-type: disc;
+            font-size: 16px;
+            line-height: 1.8;
+            // Theme
+            color: #47406b;
+        }
+    }
+}
+#avaiable-rooms #map img {
+    width: 100%;
+}
+#single-location-results {
+    .location-list {
+        margin-bottom: 0;
+    }
+    .room-sizes-result:last-child {
+        border-bottom: 0;
+    }
+}
+@media (max-width: 420px) {
+    section#single-location {
+        h1 {
+            display: block;
+            float: none;
+        }
+        .get-directions {
+            float: none;
+            display: block;
+        }
+    }
+}
+@media (max-width: 768px) {
+    /* Single Search Result */
+    
+    section#single-location h1 i {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-right: 10px;
+    }
+}

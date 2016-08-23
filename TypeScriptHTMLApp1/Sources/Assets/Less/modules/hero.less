@@ -1,0 +1,113 @@
+.hero {
+    &.hero-homepage {
+        background: #22225a;
+        height: 564px;
+        position: relative;
+        text-align: center;
+        h1 {
+            .NexaRegular;
+            color: #FFF;
+            font-size: 32px;
+            line-height: 2;
+            span {
+                display: block;
+                font-size: 60px;
+                line-height: 1;
+                font-weight: 700;
+            }
+        }
+        a.cta {
+            i {
+                font-size: 20px;
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                border: 1px solid white;
+                border-radius: 100%;
+                padding-left: 4px;
+                color: #FFF;
+            }
+        }
+        .search-bar {
+            position: absolute;
+            bottom: 0;
+            z-index: 10;
+            -moz-transition: all .3s linear;
+            -o-transition: all .3s linear;
+            -webkit-transition: all .3s linear;
+            transition: all .3s linear;
+        }
+        .search-bar.on-top {
+            bottom: 420px;
+        }
+    }
+    &.hero-compact {
+        .search-bar {
+            position: relative;
+            bottom: auto;
+            float: none;
+        }
+    }
+    &.hero-cards {
+        position: relative;
+        .card {
+            padding-top: 140px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 0;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -moz-transition: all .4s linear;
+            -o-transition: all .4s linear;
+            -webkit-transition: all .4s linear;
+            transition: all .4s linear;
+            &#card-locations {
+                padding-top: 0;
+            }
+            &.card-video {
+                background-image: url('@{dir-images}/temp-bg-video.jpg');
+                background-size: cover;
+            }
+            &.card-active {
+                opacity: 1;
+                z-index: 2;
+            }
+        }
+        &.hero-compact {
+            .card {
+                overflow: hidden;
+                position: relative;
+                max-height: 0;
+                padding-top: 0;
+                &.card-active {
+                    opacity: 1;
+                    z-index: 2;
+                    max-height: 9999px;
+                }
+                &#card-locations {
+               height: 360px;
+            }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero.hero-homepage {
+        padding-top: 0;
+        background: none;
+        height: auto;
+        h1,
+        a.cta {
+            display: none;
+        }
+        .search-bar {
+            position: relative;
+        }
+    }
+}

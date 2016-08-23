@@ -1,0 +1,88 @@
+section.advantage-list {
+    background: url('@{dir-images}/bg-streets.png');
+    padding: 72px 0;
+    h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        color: @color-dark;
+        .ProximaSemiBold;
+    }
+    ul.features-list {
+        .helper-clear-list;
+        .helper-wrapper;
+        display: flex;
+        justify-content: center;
+        li {
+            display: inline-block;
+            margin: 0 35px;
+            width: 140px;
+            vertical-align: middle;
+            float: none;
+            .icon-wrapper {
+                background-color: #343679;
+                width: 126px;
+                height: 126px;
+                border-radius: 100%;
+            }
+            .description {
+                margin-top: 22px;
+                text-align: center;
+                color: @color-dark;
+            }
+        }
+    }
+    a.cta {
+        border-bottom: 1px dashed;
+        font-size: 16px;
+        color: #00b7ec;
+        .ProximaSemiBold;
+        &:after {
+            content: '\203A';
+            margin-left: 10px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    section.advantage-list ul.features-list {
+        flex-wrap: wrap;
+        li .icon-wrapper {
+            width: 100px;
+            height: 100px;
+            float: none;
+            margin: 0 auto;
+        }
+    }
+}
+@media (max-width: 420px) {
+    section.advantage-list {
+        padding: 25px 0;
+        ul.features-list {
+            text-align: center;
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
+@media (max-width: 340px) {
+    section.advantage-list ul.features-list {
+        overflow: hidden;
+        li {
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 0;
+            .icon-wrapper {
+                width: 65px;
+                height: 65px;
+                float: left;
+            }
+            p.description {
+                float: left;
+                width: auto;
+                padding: 0 15px 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+section#nearby-locations {
+    padding: 0 0 50px;
+    .list-wrapper {
+        margin: 40px auto 40px;
+        float: none;
+        a {
+            display: inline-block;
+            margin: 0 0 40px 25px;
+            color: @color-dark;
+        }
+        i {
+            margin-right: 10px;
+            padding: 10px 15px;
+            display: inline;
+        }
+    }
+    a.cta {
+        border-bottom: 1px dashed;
+        border-color: @color-accent;
+        .Proxima;
+    }
+}
+
+section#nearby-attractions {
+    background: url('@{dir-images}/bg-streets.png');
+    padding: 60px 0;
+    color: @color-dark;
+    h1 {
+        font-size: 24px;
+        line-height: 1.5;
+        text-align: center;
+        .ProximaSemiBold;
+    }
+    ul {
+        .helper-clear-list;
+        .helper-wrapper;
+        justify-content: center;
+        li {
+            .icon {
+                text-align: center;
+            }
+            p.title {
+                font-size: 20px;
+                margin: 0 0 10px;
+                .ProximaSemiBold;
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    section#nearby-attractions ul li {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    section#nearby-attractions ul li {
+        text-align: center;
+        img {
+            margin-bottom: 15px;
+        }
+    }
+    section#nearby-locations .list-wrapper {
+        text-align: center;
+    }
+}

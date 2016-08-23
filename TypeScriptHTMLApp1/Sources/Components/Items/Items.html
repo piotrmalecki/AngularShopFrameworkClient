@@ -1,0 +1,91 @@
+﻿<div class="container body-content">
+    <link type="text/css" rel="stylesheet" href="Public/Assets/Css/PagedList1.css">
+    <h2>Order some good food.</h2>
+    <div class="bs-docs-section">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">Find: </span>
+                        <input type="text" value="" name="SearchString" id="SearchString" ng-model="viewModel.searchValue" required>
+                        <span class="input-group-btn">
+                            <input type="button" value="Search" class="btn btn-info btn-sm" ng-click="viewModel.search()">
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>
+
+                    <a href="" ng-click="orderBy = 'CatagoryName'; reverse=!reverse">Catagorie</a>
+                </th>
+                <th>
+                    <a href="" ng-click="orderBy = 'Name'; reverse=!reverse">Item Name</a>
+                </th>
+                <th>
+                    <a href="" ng-click="orderBy = 'Price'; reverse=!reverse">Item Price</a>
+                </th>
+                <th>
+                    Picture
+                </th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="row in viewModel.items | orderBy:orderBy:reverse">
+                <td>
+                    {{row.CatagoryName}}
+                </td>
+                <td>
+                    {{row.Name}}
+                </td>
+                <td>
+                    {{row.Price}}
+                </td>
+                <td>
+                    {{row.ItemPictureUrl}}
+                </td>
+                <td>
+                    <button type="button"  class="btn btn-info btn-lg"  ng-click="viewModel.addProduct(row.ID)" id="{{row.Name}}">Add to Cart</button>
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="viewModel.goToShoppingCart()" id="Check">Check Out</button>
+    <br>
+    Page 1 of 1
+
+    <!--<div class="pagination-container"><ul class="pagination"><li class="active"><a>1</a></li><li><a href="/Items?page=2">2</a></li><li class="PagedList-skipToNext"><a rel="next" href="/Items?page=2">»</a></li></ul></div>-->
+    <hr>
+    <footer>
+        <p>&copy; 2016 - Shop Framework by <a class="githubLink" href="https://github.com/piotrmalecki">maly161</a></p>
+    </footer>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+    <div aria-hidden="true" class="alert alert-dismissable alert-success">
+        <button type="button" ng-click="viewModel.closeModal()" class="close" data-dismiss="alert">×</button>
+        <strong>An item was added to your cart.</strong> To check out now simply <a href="#" class="alert-link">click here</a>.
+    </div>
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Confirm check out.</h4>
+            </div>
+            <div class="modal-body">
+                <p>Would you like to check out or keep shopping?</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="viewModel.addProduct(row.ID)">Continue</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="viewModel.goToShoppingCart()">Check Out</button>
+            </div>
+        </div>
+    </div>
+</div>

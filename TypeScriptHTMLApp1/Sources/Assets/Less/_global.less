@@ -1,0 +1,297 @@
+main {
+    overflow: hidden;
+}
+section {
+    .helper-wrapper;
+    header.full-width {
+        width: 100%;
+        border-top: 1px solid #dddddd;
+        padding: 38px 0;
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &.branded {
+        background: @color-brand;
+        h3 {
+            color: #FFF;
+        }
+    }
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.input-wrapper {
+    position: relative;
+
+    &.ng-invalid {
+        input {
+            border: 1px solid #e92020;
+        }
+    }
+
+    .ng-validation-icon {
+        position: absolute;
+        right: 13px;
+        top: 13px;
+        &.ng-hide-add, &.ng-hide-remove {
+            transition: all linear 0.25s;
+        }
+        &.ng-hide {
+            opacity: 0;
+        }
+    }
+
+    .ng-icon-invalid {
+        color: #e92020;
+    }
+
+    .ng-icon-valid {
+        color: @color-accent;
+    }
+}
+
+.btn-wide {
+    width: 100%;
+}
+
+
+// 
+// Titles and descriptions
+section.description {
+    p {
+        text-align: center;
+        margin: 0;
+        padding: 52px 0;
+        font-size: 24px;
+        line-height: 1.4;
+        .ProximaSemiBold;
+        color: @color-dark;
+    }
+}
+// Form states
+
+// Business page
+// 
+// 
+// 
+section.header {
+    text-align: center;
+    color: @color-dark;
+    h3 {
+        margin: 0;
+    }
+}
+// Elements
+.comment {
+    &.comment-with-title {
+        span.title {
+            .ProximaSemiBold;
+            color: @color-dark;
+        }
+    }
+}
+
+/* 
+    Subway icons
+    Used in Location Details to indicate subway routes
+*/
+.subway-icon-Diamond {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  color: #FFF;
+  padding: 2px;
+}
+
+.subway-icon-Diamond:before {
+  display: block;
+  content: '';
+  width: 18px;
+  height: 18px;
+  z-index: -1;
+  position: absolute;
+  transform: rotate(45deg);
+      &.Green {
+         background: #00933C;
+    }
+      &.Purple {
+         background: #B933AD;
+    }
+}
+.subway-icon-Circle {
+   
+    color: #FFF;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 1.3;
+    .ProximaSemiBold;
+    &.Red {
+         background: #EE352E;
+    }
+    &.Blue {
+         background: #274fac;
+    }
+    &.Green {
+         background: #00933C;
+    }
+    &.Purple {
+         background: #B933AD;
+    }
+    &.Orange {
+         background: #F66319;
+    }
+    &.Lime {
+         background: #6CBE45;
+    }
+    &.lightGray {
+         background: #A7A9AC;
+    }
+    &.Brown {
+         background: #996633;
+    }
+    &.Grey {
+         background: #808183;
+    }
+    &.Yellow {
+         background: #FCCC0A;
+         color: #000000 ;
+    }
+}
+
+ #diamond { width: 0; height: 0; border: 50px solid transparent; border-bottom-color: red; position: relative; top: -50px; } 
+ #diamond:after { content: ''; position: absolute; left: -50px; top: 50px; width: 0; height: 0; border: 50px solid transparent; border-top-color: red; }
+/*
+    Count icons
+    Used in Search Results to indicate result number
+ */
+
+span.count {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 2;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 100%;
+    margin-right: 5px;
+    border: 1px solid #078db2;
+    background-color: @color-accent;
+    .ProximaSemiBold;
+    color: white;
+}
+/* 
+    Position in Stack icons 
+    Used in Search Results to indicate positioning
+*/
+
+.stack-icon {
+    background: url('@{dir-images}/icons/stack.png') no-repeat;
+    width: 28px;
+    height: 34px;
+    &.bottom {
+        background-position: 0 0;
+    }
+    &.middle {
+        background-position: -28px 0;
+    }
+    &.top {
+        background-position: -56px 0;
+        width: 46px;
+    }
+}
+
+.loading-pane {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    color: @color-brand;
+    font-size: 34px;
+    text-align: center;
+    .Proxima;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &.loading-pane-inline {
+        background: rgba(255,255,255, .75);
+
+        .loading-pane-inner {
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            background: #FFF;
+            width: 220px;
+            border: 1px solid #e7e7e7;
+            margin-left: -110px;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+
+    .loading-pane-inner {
+        background: rgba(255,255,255, .75);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding-top: 45%;
+        opacity: 0;
+        -moz-transition: all .25s linear;
+        -o-transition: all .25s linear;
+        -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+    }
+
+    .loading-pane-page {
+        background: rgba(255,255,255, .75);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding-top: 20%;
+        opacity: 0;
+        -moz-transition: all .25s linear;
+        -o-transition: all .25s linear;
+        -webkit-transition: all .25s linear;
+        transition: all .25s linear;
+    }
+
+    &.active {
+        visibility: visible;
+
+        .loading-pane-inner {
+            opacity: 1;
+        }
+
+        .loading-pane-page {
+            opacity: 1;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}

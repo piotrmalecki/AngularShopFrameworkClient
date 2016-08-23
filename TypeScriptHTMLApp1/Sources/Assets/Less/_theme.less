@@ -1,0 +1,601 @@
+// * ============================ */
+//
+// IMPORTANT !
+//
+// In this stylesheet we define only such
+// attributes like: colors, background-colors,
+// background images, font-families etc. 
+//
+// DO NOT use this stylesheet's variables and
+// helper classes in other *.less files 
+//
+// * ============================ */
+
+/* ============================== */
+
+
+/* =========== Colors =========== */
+
+
+/* ============================== */
+
+@color-brand: #34367a;
+@color-light: #4c5999;
+@color-dark: #47406b;
+@color-accent: #00b8ec;
+@color-off: #00b8ec;
+@color-hover: #00a6d4;
+@color-light-grey: #f7f8f9;
+@color-grey: #e7e7e7;
+.color-brand {
+    color: @color-brand;
+}
+
+.color-light {
+    color: @color-light;
+}
+
+.color-accent {
+    color: @color-accent;
+}
+
+.color-off {
+    color: @color-off;
+}
+
+
+/* ============================== */
+
+
+/* ============ Fonts =========== */
+
+
+/* ============================== */
+
+.NexaRegular {
+    font-family: NexaRegular;
+    font-weight: 500;
+}
+
+.NexaSlab {
+    font-family: NexaSlab;
+    font-weight: 500;
+}
+
+.NexaSlabBold {
+    font-family: NexaSlab;
+    font-weight: 700;
+}
+
+.Proxima {
+    font-family: Proxima;
+    font-weight: 500;
+}
+
+.ProximaSemiBold {
+    font-family: Proxima;
+    font-weight: 600;
+}
+
+.ProximaBold {
+    font-family: Proxima;
+    font-weight: 700;
+}
+
+
+/* ============================== */
+
+
+/* ========== Elements ========== */
+
+
+/* ============================== */
+
+body {
+    .Proxima;
+    font-size: 16px;
+}
+
+h1 {
+    .NexaSlabBold;
+    font-size: 60px;
+}
+
+h2 {
+    .ProximaSemiBold;
+    font-size: 30px;
+    &.accent {
+        .NexaSlab;
+    }
+}
+
+h3 {
+    .ProximaSemiBold;
+    font-size: 24px;
+}
+
+h4 {
+    .ProximaSemiBold;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: @color-dark;
+    &.leading {
+        font-size: 23px;
+    }
+    &.sub {
+        font-size: 14px;
+    }
+}
+
+a {
+    color: @color-accent;
+    &:hover {
+        color: @color-accent;
+        text-decoration: none;
+    }
+    &.link {
+        border-bottom: 1px dotted @color-accent;
+        display: inline-block;
+        padding: 0 10px 0 5px;
+        &:after {
+            font-family: FontAwesome;
+            content: "\f105";
+            display: inline-block;
+            margin-left: 10px;
+        }
+        &.plain {
+            &:after {
+                display: none;
+            }
+            padding:0;
+        }
+    }
+    &.external {
+        border: none;
+        padding: 0 10px 0 0;
+        &:hover {
+            color: @color-hover;
+        }
+        &:after {
+            font-family: FontAwesome;
+            content: "\f061";
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+}
+
+// Lines
+hr {
+    &.short {
+        width: 60px;
+        border-top: 1px solid;
+        margin: 32px auto;
+        border-color: @color-dark;
+    }
+    &.long {
+        width: 90%;
+        border-top: 1px solid;
+        margin: 32px auto;
+        border-color: @color-dark;
+    }
+    &.medium {
+        width: 80px;
+        border-top: 1px solid;
+        margin: 16px auto;
+        border-color: #e5e5e5;
+    }
+}
+
+// Icons
+i {
+    // Features
+    &.i-move-in {}
+    &.i-truck {}
+    &.i-clock {}
+    &.i-secure-location {}
+    &.i-amenities {}
+    &.i-safety {}
+    &.i-package {}
+    // Filters
+    &.i-main-floor {}
+    &.i-air-conditioned {}
+    &.i-extra-height {}
+    &.i-extra-wide {}
+    &.i-24-hours {}
+    // Positions
+    &.i-position-top {}
+    &.i-position-mid {}
+    &.i-position-bot {}
+    // Others
+    &.i-q-mark {}
+    &.i-location-pin {
+        display: inline-block;
+        height: 36px;
+        width: 30px;
+        background: url('@{dir-images}/icons/icon-map-pin.svg') center center no-repeat;
+        background-size: 30px 36px;
+        padding: 4px 15px;
+        &.size-medium {
+            height: 25px;
+            width: 33px;
+            background-size: contain;
+        }
+    }
+}
+
+// Quote
+blockquote {
+    margin: 0;
+    padding: 20px 30px;
+    position: relative;
+    color: @color-dark;
+    span {
+        display: inline-block;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    footer {
+        .ProximaSemiBold;
+        font-size: 16px;
+        line-height: 23px;
+    }
+    &:before,
+    span:after {
+        color: #99e3f7;
+        .Proxima;
+        font-size: 54px;
+    }
+    &:before {
+        content: '“';
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    span:after {
+        content: '”';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+        bottom: 16px;
+    }
+}
+
+
+/* ============================== */
+
+
+/* ========= Elements =========== */
+
+
+/* ========= Bootstrap ========== */
+
+
+/* ============================== */
+
+// Buttons
+.btn {
+    font-size: 16px;
+    padding: 11px 20px;
+    &.btn-xs {
+        padding: 3px 6px;
+    }
+    &.btn-default {
+        background: @color-accent;
+        border-color: @color-accent;
+        color: #FFF;
+        font-weight: 600;
+        &:hover,
+        &:focus,
+        .active {
+            background: @color-hover;
+            border-color: @color-hover;
+            color: #FFF;
+            outline: none;
+        }
+    }
+    &.btn-transparent {
+        background: transparent;
+        border-color: white;
+        color: #FFF;
+        font-weight: 600;
+        &:hover,
+        &:hover,
+        &:focus,
+        &.active {
+            background: white;
+            color: @color-accent;
+            outline: none;
+        }
+    }
+    &.btn-transparent-dark {
+        background: transparent;
+        border-color: white;
+        color: @color-dark;
+        font-weight: 600;
+        &:hover,
+        &:hover,
+        &:focus,
+        &.active {
+            background: white;
+            color: @color-brand;
+            outline: none;
+        }
+    }
+    &.btn-outline {
+        background: #FFF;
+        border: 3px solid @color-accent;
+        color: @color-accent;
+        padding: 10px 18px 9px;
+        .ProximaSemiBold;
+        &:hover {
+            color: #00a6d4;
+            border-color: #00a6d4;
+        }
+    }
+}
+
+// Forms
+.form-control {
+    font-size: 16px;
+    box-shadow: none;
+    padding: 12px 15px;
+    border: 1px solid #E7E7E7;
+    line-height: 1.2;
+    height: auto;
+    color: @color-accent;
+    box-sizing: border-box;
+    &:focus {
+        box-shadow: none;
+        border: 1px solid @color-accent;
+    }
+}
+
+select.form-control {
+    padding: 11px 15px;
+    &.has-placeholder {
+        color: #9999A2;
+        option {
+            &:first-child {
+                display: none;
+            }
+            color: @color-accent;
+        }
+        &.ng-dirty {
+            color: @color-accent;
+        }
+    }
+}
+
+.radio-inline,
+.radio,
+.checkbox-inline,
+.checkbox {
+    color: @color-dark;
+    label {
+        .Proxima;
+    }
+}
+
+select.select-primary {
+    background: @color-accent;
+    color: #FFF;
+    border: 1px solid @color-accent;
+}
+
+.select-primary {
+    background: @color-accent;
+    text-align: left;
+    border: 1px solid @color-accent;
+    a.trigger {
+        color: #FFF;
+        width: 100%;
+        display: inline-block;
+        text-decoration: none;
+        i {
+            float: right;
+        }
+    }
+    .dropdown-menu {
+        width: 100%;
+    }
+    .ProximaSemiBold;
+}
+
+.btn-checkbox.btn.btn-xs {
+    padding: 0;
+    line-height: 1;
+    font-size: 15px;
+    width: 18px;
+    height: 18px;
+    background: #FFF;
+    border: 1px solid @color-dark;
+    color: @color-dark;
+    &.checked {
+        background: @color-dark;
+        color: #FFF;
+    }
+}
+
+.checkbox .btn-checkbox,
+.checkbox-inline .btn-checkbox {
+    float: left;
+}
+
+.checkbox .label,
+.checkbox-inline .label {
+    line-height: 1.2;
+    float: left;
+    padding-left: 8px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker-group {
+    table:focus {
+        outline: none;
+    }
+    input {
+        border-right: 0;
+        &:focus ~ .input-group-btn button {
+            border-color: @color-accent;
+        }
+        &[readonly] {
+            background: #FFF;
+        }
+    }
+    button.btn.btn-toggle {
+        background: #FFF;
+        border: 1px solid @color-grey;
+        border-left: 0;
+        color: @color-accent;
+        font-size: 20px;
+        padding: 8px 15px;
+        -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        &:focus,
+        &:hover,
+        &:active {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .dropdown-menu {
+        padding: 10px;
+        td {
+            button {
+                &[disabled] {
+                    color: #666;
+                }
+                &.active {
+                    background: @color-accent;
+                    color: #FFF;
+                }
+                .text-muted {
+                    color: rgba(128, 128, 128, .65);
+                }
+            }
+        }
+        .btn-default {
+            background: #FFF;
+            border: none;
+            padding: 5px;
+            color: #666;
+            .Proxima;
+        }
+        .button-bar {
+            button {
+                width: auto;
+                padding: 5px 7px;
+                font-size: 13px;
+                &.btn-danger {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* ============================== */
+
+
+/* ====== Colors - Text ========= */
+
+
+/* ====== Font - families ======= */
+
+
+/* ====== Background - colors  == */
+
+
+/* ====== Background - images  == */
+
+
+/* ============================== */
+
+.bg-light-grey {
+    background: @color-light-grey;
+}
+
+section {
+    header.full-width {
+        background-color: #f7f8f9;
+        h1 {
+            .ProximaSemiBold;
+            color: @color-dark;
+        }
+    }
+    //
+    // Moving supplies
+    // 
+    &#title-with-background {
+        background: url('@{dir-images}/temp-bg-title.jpg') center -220px no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding: 130px 0;
+        position: relative;
+        height: 340px;
+        h1 {
+            color: #FFF;
+            z-index: 5;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            margin: 0;
+            small {
+                display: block;
+                margin-top: 5px;
+                text-align: center;
+                font-size: 24px;
+                .Proxima;
+            }
+        }
+        &.compact {
+            padding: 45px 0;
+            height: 190px;
+            h1 {
+                font-size: 40px;
+            }
+        }
+        .overlay {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .2);
+            z-index: 1;
+        }
+    }
+    // Form states
+    &#deal-select {
+        background-image: url('@{dir-images}/bg-streets.png');
+        header {
+            p {
+                &.location {
+                    .ProximaSemiBold;
+                }
+                &.cross {}
+            }
+        }
+        form {
+            button {}
+        }
+    }
+    &#confirmation {
+        background-image: url('@{dir-images}/bg-streets.jpg');
+    }
+}

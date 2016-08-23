@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ShopFramework">
+<head>
+    <!-- [Meta] -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="fragment" content="#">
+    <base href="/">
+    <meta name="viewport" content="width=device-width,maximum-scale=1,initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="page" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <!-- [Title] -->
+    <title>ShopFramework</title>
+    <!-- [Favicon] -->
+    <link rel="icon" href="/Public/Assets/Images/favicon.ico">
+    <!-- [Stylesheets] -->
+
+    <link rel="stylesheet" href="Public/Assets/Css/bootstrap.css">
+    <!--<link rel="stylesheet" href="Public/Assets/Css/variables.less">
+    <link rel="stylesheet" href="Public/Assets/Css/bootswatch.less">-->
+    <link rel="stylesheet" href="Public/Assets/Css/site.css">
+    <link rel="stylesheet" href="Public/Assets/Css/card.css" >
+    <link rel="stylesheet" href="Sources/Vendor/angular-growl/angular-growl.min.css">
+    <!--<link rel="stylesheet" href="Public/Assets/Css/datepicker.css">-->
+   
+    <!-- [Scripts] -->
+
+    <script type="text/javascript" src="Sources/Vendor/lodash/lodash.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/jquery/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/angular/angular.min.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/ui-bootstrap/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/angular/angular-animate.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/angular-growl/angular-growl.min.js"></script>
+    <script type="text/javascript" src="Sources/Vendor/ui-router-master/angular-ui-router.js"></script>
+    <script type="text/javascript" src="Public/main.js"></script>
+    <script type="text/javascript" src="scripts/angular-applicationinsights.js"></script>
+    <!--<script language="javascript">
+        var amazingApp = angular.module('amazingApp', ['ApplicationInsightsModule']);
+    </script>-->
+    <!--<script language="javascript">
+    var amazingApp = angular.module('amazingApp', ['ApplicationInsightsModule']);
+
+    amazingApp.config(function(applicationInsightsServiceProvider){
+        var options = {applicationName:'amazingApp'};
+        // Configuration options are described below
+        applicationInsightsServiceProvider.configure('39be1f73-025a-4d76-aab6-08683919a870', options);
+    });
+    </script>-->
+    <!--<script type="text/javascript">
+  var appInsights=window.appInsights||function(config){
+    function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+    }({
+        instrumentationKey:"39be1f73-025a-4d76-aab6-08683919a870"
+    });
+
+    window.appInsights=appInsights;
+    appInsights.trackPageView();
+    </script>-->
+</head>
+<body>
+    <div growl></div>
+        <div class="bs-component" ng-controller="BaseController">
+            <ng-include src="'Sources/Components/Shared/Header.html'"></ng-include>
+            <div ui-view autoscroll="false"></div>
+        </div>
+
+</body>
+</html>

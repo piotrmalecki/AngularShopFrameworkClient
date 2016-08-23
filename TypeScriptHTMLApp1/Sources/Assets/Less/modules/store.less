@@ -1,0 +1,257 @@
+.search-filters.supplies {
+    text-align: center;
+    .title {
+        margin-right: 10px;
+        display: block;
+        float: left;
+        line-height: 2.2;
+        .ProximaSemiBold;
+    }
+    .form-group {
+        display: inline-block;
+        margin: 0;
+        ul li {
+            display: inline-block;
+            float: none;
+            margin: 0;
+        }
+    }
+}
+
+.store-checkout {
+    margin: 25px 0;
+    .summary {
+        border: 2px solid @color-dark;
+        padding: 10px;
+        .heading {
+            margin: 0;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            tr {
+                td {
+                    vertical-align: middle;
+                    &:first-child {}
+                    &:last-child {
+                        text-align: right;
+                        font-size: 20px;
+                        .ProximaBold;
+                    }
+                }
+                &:last-child td {
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    form {
+        h3:first-child {
+            margin-top: 0;
+        }
+        .shipping-options {
+            .form-group:first-child {
+                margin-bottom: 0;
+                height: 48px;
+            }
+            .checkbox {
+                padding-left: 0;
+                &:not(.checkbox-inline) {
+                    float: left;
+                    
+                }
+            }
+            select {
+                float: left;
+                width: 250px;
+                margin: -4px 0 0 10px;
+            }
+        }
+    }
+}
+
+.store-cart {
+    padding: 30px 0;
+    margin-bottom: 20px;
+    .header {
+        margin-bottom: 20px;
+        h3,
+        h4 {
+            margin: 0;
+            text-transform: uppercase;
+            color: @color-dark;
+        }
+    }
+    .cart-items {
+        margin-bottom: 20px;
+    }
+    .cart-item {
+        line-height: 80px;
+        border-bottom: 1px solid #e2e2e2;
+        &:first-child {
+            border-top: 1px solid #e2e2e2;
+        }
+        .item-quantity {
+            span {
+                float: left;
+                margin-right: 10px;
+            }
+            input {
+                float: left;
+                margin: 18px 0;
+                &.form-control {
+                    width: 70px;
+                }
+            }
+        }
+    }
+    .footer {
+        text-align: right;
+    }
+}
+
+.store {
+    background-color: #f7f8f9;
+    padding-top: 30px;
+    article {
+        margin-bottom: 30px;
+        header {
+            background-color: #333579;
+            padding: 20px 25px;
+            color: #FFF;
+            h1 {
+                font-size: 20px;
+                margin: 0 0 5px;
+                .ProximaSemiBold;
+            }
+            p {
+                .Proxima;
+                color: #FFF;
+                margin: 0;
+            }
+        }
+        .content {
+            background: #FFF;
+            .image-container {
+                border-bottom: 1px solid #e7e7e7;
+                text-align: center;
+                img {
+                    max-width: 100%;
+                }
+            }
+            p.description {
+                color: @color-dark;
+                padding: 40px 25px;
+                font-size: 14px;
+                line-height: 1.2;
+                margin: 0;
+            }
+        }
+        footer {
+            background: #FFF;
+            padding: 0 25px 20px;
+            label {
+                float: left;
+                font-size: 16px;
+                line-height: 46px;
+                .Proxima;
+                color: #333579;
+            }
+            .input-wrapper {
+                float: left;
+                input {
+                    font-size: 16px;
+                    text-align: center;
+                    border-radius: 0;
+                    padding: 4px 0;
+                    width: 30px;
+                    margin-top: 10px;
+                    margin-left: 13px;
+                    color: #333579;
+                    border-color: #333579;
+                }
+            }
+            button {
+                float: right;
+            }
+        }
+    }
+    aside {
+        header {
+            background-color: #333579;
+            color: #FFF;
+            padding: 13px 0;
+            h1 {
+                font-size: 20px;
+                margin: 0;
+                text-align: center;
+                .ProximaSemiBold;
+            }
+        }
+        ul.products {
+            .helper-clear-list;
+            background: #FFF;
+            padding-top: 20px;
+            li {
+                position: relative;
+                display: block;
+                width: 100%;
+                .product-remove {
+                    position: relative;
+                    float: left;
+                    margin: 0 5px;
+                    color: #333579;
+                }
+                .product-wrapper {
+                    float: left;
+                    width: 145px;
+                    p {
+                        margin: 0;
+                        &.product-name {
+                            .ProximaSemiBold;
+                            color: #333579;
+                        }
+                        &.product-price {
+                            .Proxima;
+                        }
+                    }
+                }
+                hr {
+                    margin: 15px 0;
+                }
+                .product-quantity {
+                    position: absolute;
+                    color: #333579;
+                    top: 0;
+                    right: 15px;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    font-size: 13px;
+                    border: 1px solid #333579;
+                }
+            }
+        }
+        footer {
+            .helper-wrapper;
+            background-color: #333579;
+            padding: 30px 0 20px 25px;
+            p.summary {
+                font-size: 16px;
+                line-height: 23px;
+                margin: 0;
+                color: #FFF;
+                .Proxima;
+                span {
+                    font-size: 20px;
+                    line-height: 33px;
+                    .ProximaSemiBold;
+                }
+            }
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+}
